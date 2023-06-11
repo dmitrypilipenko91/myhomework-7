@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <form action="https://fe.it-academy.by/TestForm.php" method="post" target="_blank" name="myform">
+    <label>Разработчики:</label>
+    <input type="text" name="developpers">
+    <span id="devsError"></span><br>
+    
+    <label>Название сайта:</label>
+    <input type="text" name="sitename">
+    <span id="nameError"></span><br>
+      
+    <label>URL сайта:</label>
+    <input type="text" name="siteurl">
+    <span id="urlError"></span><br>
+      
+    <label>Дата запуска сайта:</label>
+    <input type="date" name="creationdate">
+    <span id="dateError"></span><br>
+      
+    <label>Посетителей в сутки:</label>
+    <input type="number" name="visitorsamount">
+    <span id="amountError"></span><br>
+      
+    <label>E-mail для связи:</label>
+    <input type="email" name="email">
+    <span id="emailError"></span><br>
+      
+    <label>Рубрика каталога:</label>
+    <select name="cataloguesection">
+      <option value="1">здоровье</option>
+      <option value="2">домашний уют</option>
+      <option value="3" selected>бытовая техника</option>
+    </select><span id="sectionError"></span><br>
+      
+    <label>Размещение:</label>
+    <input type="radio" name="hostpayment" value="1">бесплатное
+    <input type="radio" name="hostpayment" value="2">платное
+    <input type="radio" name="hostpayment" value="3">VIP
+    <span id="hostError"></span><br>
+      
+    <label>Разрешить отзывы:</label>
+    <input type="checkbox" name="commentpermission">
+    <span id="commentError"></span><br>
+      
+    <label>Описание сайта:</label><br>
+    <textarea name="sitedescription"></textarea>
+    <span id="descriptionError"></span><br>
+      
+    <input type="submit" value="Опубликовать">
+  </form>
+  
+  <script src="index.js"></script>
+  
+</body>
+
+</html>
