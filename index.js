@@ -1,7 +1,7 @@
 const myForm = document.forms.myform;
 
 const devsField = myForm.elements.developpers;
-devsField.addEventListener("focusout", validateDevsField, false);
+devsField.addEventListener("focusout", validateDevsField);
 function validateDevsField(eo) {
   eo = eo || window.event;
   const devsValue = devsField.value;
@@ -18,7 +18,7 @@ function validateDevsField(eo) {
 }
 
 const nameField = myForm.elements.sitename;
-nameField.addEventListener("focusout", validateNameField, false);
+nameField.addEventListener("focusout", validateNameField);
 function validateNameField(eo) {
   eo = eo || window.event;
   const nameValue = nameField.value;
@@ -31,7 +31,7 @@ function validateNameField(eo) {
 }
 
 const urlField = myForm.elements.siteurl;
-urlField.addEventListener("focusout", validateUrlField, false);
+urlField.addEventListener("focusout", validateUrlField);
 function validateUrlField(eo) {
   eo = eo || window.event;
   const urlValue = urlField.value;
@@ -44,7 +44,7 @@ function validateUrlField(eo) {
 }
 
 const creatDateField = myForm.elements.creationdate;
-creatDateField.addEventListener("focusout", validateCreatDateField, false);
+creatDateField.addEventListener("focusout", validateCreatDateField);
 function validateCreatDateField(eo) {
   eo = eo || window.event;
   const creatDateValue = creatDateField.value;
@@ -57,7 +57,7 @@ function validateCreatDateField(eo) {
 }
 
 const visAmountField = myForm.elements.visitorsamount;
-visAmountField.addEventListener("focusout", validateAmountField, false);
+visAmountField.addEventListener("focusout", validateAmountField);
 function validateAmountField(eo) {
   eo = eo || window.event;
   const visAmountValue = visAmountField.value;
@@ -70,7 +70,7 @@ function validateAmountField(eo) {
 }
 
 const emailField = myForm.elements.email;
-emailField.addEventListener("focusout", validateEmailField, false);
+emailField.addEventListener("focusout", validateEmailField);
 function validateEmailField(eo) {
   eo = eo || window.event;
   const emailValue = emailField.value;
@@ -83,7 +83,7 @@ function validateEmailField(eo) {
 }
 
 const sectionField = myForm.elements.cataloguesection;
-sectionField.addEventListener("focusout", validateSectionField, false);
+sectionField.addEventListener("focusout", validateSectionField);
 function validateSectionField(eo) {
   eo = eo || window.event;
   const sectionValue = sectionField.value;
@@ -109,7 +109,7 @@ for (let i = 0; i < hostField.length; i++) {
 }
 
 const commentField = myForm.elements.commentpermission;
-commentField.addEventListener("change", validateCommentField, false);
+commentField.addEventListener("change", validateCommentField);
 function validateCommentField(eo) {
   eo = eo || window.event;
   const commentValue = commentField.checked;
@@ -122,7 +122,7 @@ function validateCommentField(eo) {
 }
 
 const descriptField = myForm.elements.sitedescription;
-descriptField.addEventListener("focusout", validateDescriptField, false);
+descriptField.addEventListener("focusout", validateDescriptField);
 function validateDescriptField(eo) {
   eo = eo || window.event;
   const descriptValue = descriptField.value;
@@ -134,7 +134,7 @@ function validateDescriptField(eo) {
     descriptionError.innerHTML = "";
 }
 
-myForm.addEventListener("submit", validateForm, false);
+myForm.addEventListener("submit", validateForm);
 
 function validateForm(eo) {
   eo = eo || window.event;
@@ -146,7 +146,6 @@ function validateForm(eo) {
     const visAmountValue = visAmountField.value;
     const emailValue = emailField.value;
     const sectionValue = sectionField.value;
-    const hostValue = hostField.value;
     const commentValue = commentField.checked;
     const descriptValue = descriptField.value;
 
